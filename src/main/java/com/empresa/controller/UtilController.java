@@ -17,7 +17,7 @@ import com.empresa.service.DeporteService;
 import com.empresa.service.UbigeoService;
 
 @RestController
-@RequestMapping("/rest/util")
+@RequestMapping("/url/util")
 @CrossOrigin(origins = "http://localhost:4200")
 public class UtilController {
 

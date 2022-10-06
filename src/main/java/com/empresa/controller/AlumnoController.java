@@ -19,7 +19,7 @@ import com.empresa.service.AlumnoService;
 import com.empresa.util.Constantes;
 
 @RestController
-@RequestMapping("/rest/alumno")
+@RequestMapping("/url/alumno")
 @CrossOrigin(origins = "http://localhost:4200")
 public class AlumnoController {
 

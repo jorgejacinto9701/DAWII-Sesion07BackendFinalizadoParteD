@@ -19,7 +19,7 @@ import com.empresa.service.ModalidadService;
 import com.empresa.util.Constantes;
 
 @RestController
-@RequestMapping("/rest/modalidad")
+@RequestMapping("/url/modalidad")
 @CrossOrigin(origins = "http://localhost:4200")
 public class ModalidadController {
 

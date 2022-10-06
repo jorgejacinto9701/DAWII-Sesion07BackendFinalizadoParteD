@@ -21,7 +21,7 @@ import com.empresa.service.DocenteService;
 import com.empresa.util.Constantes;
 
 @RestController
-@RequestMapping("/rest/docente")
+@RequestMapping("/url/docente")
 @CrossOrigin(origins = "http://localhost:4200")
 public class DocenteController {
 
