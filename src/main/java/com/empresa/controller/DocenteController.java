@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -55,13 +54,7 @@ public class DocenteController {
 
 	@GetMapping("/listaDocenteConParametros")
 	@ResponseBody
-	public ResponseEntity<Map<String, Object>> listaDocenteNombreDniUbigeo(
-			@RequestParam(name = "nombre", required = false, defaultValue = "") String nombre,
-			@RequestParam(name = "dni", required = false, defaultValue = "") String dni,
-			@RequestParam(name = "idUbigeo", required = false, defaultValue = "-1") int idUbigeo,
-			@RequestParam(name = "estado", required = true, defaultValue = "1") int estado,
-			@RequestParam(name = "fechaInicio", required = false, defaultValue = "") String fechaInicio,
-			@RequestParam(name = "fechaFin", required = false, defaultValue = "") String fechaFin) {
+	public ResponseEntity<Map<String, Object>> listaDocenteNombreDniUbigeo(String nombre,String dni,int idUbigeo, int estado, String fechaInicio, String fechaFin) {
 		Map<String, Object> salida = new HashMap<>();
 		try {
 			List<Docente> lista = docenteService.listaDocentePorNombreDniUbigeo("%"+nombre+"%", dni, idUbigeo, estado,fechaInicio, fechaFin);
